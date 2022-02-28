@@ -2,9 +2,12 @@ import React from "react";
 import useFetch from "../hooks/useFetch";
 
 export default function List() {
-  const { loading, error, data, refetch } = useFetch(
-    "https://rickandmortyapi.com/api/character"
-  );
+  const {
+    loading,
+    error,
+    data: characters,
+    refetch,
+  } = useFetch("https://rickandmortyapi.com/api/character");
 
   if (loading) {
     return "Loading...";
@@ -16,8 +19,8 @@ export default function List() {
   return (
     <div>
       <div>
-        {data?.results?.slice(0, 10).map((r) => (
-          <p key={r.name}>{r.name}</p>
+        {characters?.results?.slice(0, 10).map((r) => (
+          <p key={`character-${r.name}`}>{r.name}</p>
         ))}
       </div>
       <button onClick={refetch}> refetch</button>

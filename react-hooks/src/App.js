@@ -21,10 +21,6 @@ function App() {
     [isDarkMode]
   );
 
-  useEffect(() => {
-    console.log("changed");
-  }, [styles]);
-
   return (
     <div style={styles}>
       <button onClick={toggleDarkMode}>change theme</button>
