@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../patterns/useFetch";
 
 export default function List() {
   const {

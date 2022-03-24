@@ -1,5 +1,5 @@
 import React from "react";
-import useDebouncedFetch from "../hooks/useDebouncedFetch";
+import useDebouncedFetch from "../patterns/useDebouncedFetch";
 
 export default function Filters() {
   const [searchterm, setSearchterm] = React.useState("");
